@@ -1,6 +1,6 @@
 {
   "name": "api-vendas",
-  "version": "1.0.0",
+  "version": "1.0.1.a",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -17,7 +17,7 @@
     "@types/node": "^17.0.41",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
-    "eslint": "^8.17.0",
+    "eslint": "7.32.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.6.2",
