@@ -10,7 +10,7 @@ class UserToken {
     @Generated('uuid')
     token: string;
 
-    @Column()
+    @Column({ name: 'user_id' })
     userId: string;
 
     @CreateDateColumn({

@@ -12,11 +12,11 @@ class UserTokenRepository extends Repository<UserToken> {
     }
 
     public async generate(userId: string): Promise<UserToken | undefined> {
-        return await this.save(
-            this.create({
-                userId
-            })
-        );
+        const userToken = await this.create({
+            userId
+        });
+
+        return await this.save(userToken);
     }
 }
 
