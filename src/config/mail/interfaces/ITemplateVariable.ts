@@ -1,3 +1,4 @@
 export default interface ITemplateVariable {
-    [key: string]: string | number
-}
+    [key: string]: string | number;
+  }
+
