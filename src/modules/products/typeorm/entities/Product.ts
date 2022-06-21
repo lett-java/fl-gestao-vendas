@@ -1,4 +1,5 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import OrdersProducts from "@modules/orders/typeorm/entities/OrdersProducts";
+import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('products')
 class Product {
@@ -14,6 +15,11 @@ class Product {
 
     @Column('int')
     quantity: number;
+
+    @OneToMany(() => OrdersProducts, orderProducts => orderProducts.product, {
+        cascade: true
+    })
+    orderProducts: OrdersProducts[];
 
     @CreateDateColumn({
         name: 'created_at'
