@@ -4,6 +4,16 @@ import Customer from "../typeorm/entities/Customer";
 @EntityRepository(Customer)
 export default class CustomerRepository extends Repository<Customer> {
 
+    public async findById(id: string): Promise<Customer | undefined> {
+        const customer = await this.findOne({
+            where: {
+                id
+            }
+        });
+
+        return customer;
+    }
+
     public async findByName(name: string): Promise<Customer | undefined> {
         const customer = await this.findOne({
             where: {
